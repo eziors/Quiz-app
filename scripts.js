@@ -1,9 +1,9 @@
 const quizData = [
   {
-    question: "How was the first President of Brazil? (The New Republic)",
+    question: "Who was the first president of Brazil?",
     a: "José Sarney",
     b: "Itamar Franco",
-    c: "FHC",
+    c: "Deodoro da Fonseca",
     d: "Tancredo Neves",
     correct: "b",
   },
@@ -17,7 +17,7 @@ const quizData = [
   },
   {
     question: "3. Who is the President of US?",
-    a: "Florin Pop",
+    a: "Barack Obama",
     b: "Donald Trump",
     c: "Ivan Saldano",
     d: "Joe Biden",
@@ -32,7 +32,7 @@ const quizData = [
       correct: "a",
   },
   {
-      question: "5. What year was JavaScript launched?",
+      question: "5. Wich year was JavaScript launched?",
       a: "1996",
       b: "1995",
       c: "1994",
@@ -40,6 +40,50 @@ const quizData = [
       correct: "d",
   },
 ];
+
+const quizData_Fr = [
+  {
+    question: "Qui était le première Président de le Brésil?",
+    a: "José Sarney",
+    b: "Itamar Franco",
+    c: "Deodoro da Fonseca",
+    d: "Tancredo Neves",
+    correct: "c",
+  },
+  {
+    question: "2. Quel est le langage le plus utilisé aujourd'hui?",
+    a: "Java",
+    b: "C",
+    c: "Phyton",
+    d: "JavaScript",
+    correct: "a",
+  },
+  {
+    question: "3. Qui est le Presidént de le États-Unis",
+    a: "Barack Obama",
+    b: "Donald Trump",
+    c: "Ivan Saldano",
+    d: "Joe Biden",
+    correct: "d",
+  },
+  {
+      question: "4. Qu'est ce que HTML?",
+      a: "Hypertext Markup Language",
+      b: "Cascading Style Sheet",
+      c: "Jason Object Notation",
+      d: "Application programming interface",
+      correct: "a",
+  },
+  {
+      question: "Qui a cree Javascript et en quelle année?",
+      a: "Brendan Eich en 1996",
+      b: "Brendan Eich en 1995",
+      c: "Bill gates, 1994",
+      d: "James Gosling, 1992",
+      correct: "b",
+  },
+];
+
 
 const answersEls = document.querySelectorAll(".answer");
 const quiz = document.getElementById("quiz")
@@ -68,6 +112,7 @@ function loadQuiz(){
   d_text.innerText = currentQuizData.d;
 }
 
+loadQuiz();
 
 function getSelected() {
   let answer = undefined;
@@ -87,10 +132,7 @@ function deselectAnswers(){
     answerEl.checked = false;
   });
 }
-
-loadQuiz();
-
-  
+ 
 submitBtn.addEventListener("click", () => {
   const answer = getSelected();
 
@@ -100,18 +142,11 @@ submitBtn.addEventListener("click", () => {
     if(answer === quizData[currentQuiz].correct){
       score++;
     }
-
-
       currentQuiz++;
       if (currentQuiz < quizData.length){
         loadQuiz();
       } else {
-        quiz.innerHTML = `<h2>You answered correctyl at ${score}/${quizData.length} questions.</h2>` 
+        quiz.innerHTML = `<h2>You answered correctly at ${score}/${quizData.length} questions.</h2>` 
       }
     }
 });
-
-returnIcon.addEventListener("click", () =>{
-  currentQuiz--;
-  loadQuiz();
-})
