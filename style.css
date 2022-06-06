@@ -54,7 +54,7 @@ ul li{
     margin: 0.8rem 0;
 }
 
-ul li label{
+ul li input{
     cursor: pointer;
 }
 

@@ -1,22 +1,22 @@
 const quizData = [
   {
-    question: "Who was the first president of Brazil?",
-    a: "José Sarney",
-    b: "Itamar Franco",
-    c: "Deodoro da Fonseca",
-    d: "Tancredo Neves",
-    correct: "b",
+    question: "What is the color of the submit button?",
+    a: "Red",
+    b: "Brown",
+    c: "Purple",
+    d: "Blue",
+    correct: "c",
   },
   {
-    question: "2. What is the most used programming language in 2019",
+    question: "What is the most used programming language in 2019?",
     a: "Java",
     b: "C",
     c: "Phyton",
     d: "JavaScript",
-    correct: "b",
+    correct: "a",
   },
   {
-    question: "3. Who is the President of US?",
+    question: "Who is the President of US?",
     a: "Barack Obama",
     b: "Donald Trump",
     c: "Ivan Saldano",
@@ -24,7 +24,7 @@ const quizData = [
     correct: "d",
   },
   {
-      question: "4. What does HTML stand for?",
+      question: "What does HTML stand for?",
       a: "Hypertext Markup Language",
       b: "Cascading Style Sheet",
       c: "Jason Object Notation",
@@ -32,15 +32,14 @@ const quizData = [
       correct: "a",
   },
   {
-      question: "5. Wich year was JavaScript launched?",
+      question: "Which year was JavaScript launched?",
       a: "1996",
       b: "1995",
       c: "1994",
       d: "None of the above",
-      correct: "d",
+      correct: "b",
   },
 ];
-
 const quizData_Fr = [
   {
     question: "Qui était le première Président de le Brésil?",
